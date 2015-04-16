@@ -1,5 +1,5 @@
 {
-  "name": "Distributed Library",
+  "name": "DistributedLibrary",
   "version": "0.0.1",
   "description": "React-Flux distributed library",
   "author": "Sanjiv Jha, Anil Maurya",
@@ -10,5 +10,8 @@
     "gulp-concat": "^2.5.2",
     "react": "^0.13.1",
     "reactify": "^1.1.0"
+  },
+  "dependencies": {
+    "react-bootstrap": "^0.20.3"
   }
 }

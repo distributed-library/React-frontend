@@ -1,8 +1,10 @@
 /** @jsx React.DOM */
-var APP = require('./components/app');
-var React = require('react');
+
+React = require('react');
+APP = require('./components/app');
+FormPanel = require('./components/login');
 
 React.render(
-  <APP />,
-  document.getElementById('main')
+  <FormPanel />,
+  document.getElementById('loginbox')
 );
