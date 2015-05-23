@@ -13,6 +13,7 @@ var RouteHandler = Router.RouteHandler;
 var routes = (
   <Route name="app" path="/" handler={App}>
     <Route name="signin" handler={FormPanel}/>
+    <DefaultRoute handler={FormPanel} />
   </Route>
 );
 

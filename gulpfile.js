@@ -1,6 +1,13 @@
 var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var concat = require('gulp-concat');
+var connect = require('gulp-connect');
+gulp.task('connect', function() {
+    connect.server({
+      root: 'dist',
+      livereload: true
+    });
+});
 
 gulp.task('browserify', function() {
   gulp.src('src/js/main.js')
