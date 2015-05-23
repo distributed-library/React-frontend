@@ -1,22 +1,18 @@
-/** @jsx React.DOM */
 
-React = require('react');
-App = require('./components/app');
-FormPanel = require('./components/login');
+var React = require('react');
+var FormPanel = require('./components/login');
+var page = require('page');
 
-var Router = require('react-router');
-var DefaultRoute = Router.DefaultRoute;
-var Link = Router.Link;
-var Route = Router.Route;
-var RouteHandler = Router.RouteHandler;
-
-var routes = (
-  <Route name="app" path="/" handler={App}>
-    <Route name="signin" handler={FormPanel}/>
-    <DefaultRoute handler={FormPanel} />
-  </Route>
-);
-
-Router.run(routes, function (Handler) {
-  React.render(<Handler/>, document.body);
+page('/', function(){
+  React.render(<FormPanel/>, document.getElementById('loginbox'));
 });
+
+page('/signin', function(){
+  React.render(<FormPanel/>, document.getElementById('loginbox'));
+});
+
+page('/signup', function(){
+  React.render(<h1> sanjiv </h1>, document.getElementById('loginbox'));
+});
+
+page.start();
